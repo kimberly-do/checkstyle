@@ -13,7 +13,14 @@ body {
     position: absolute;
 }
 
-
+#addEvent {
+    right: 0px;
+    border-radius: 50px;
+    padding: 5px;
+    background-color: #fff;
+    font-size: 40px;
+    position: fixed
+}
 
 #calendar {
     left: 200px;
