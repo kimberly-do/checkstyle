@@ -5,18 +5,18 @@ $(function() {
       
  selectable: true,  
       defaultView: 'month',
-
-      header: {
-  left: 'title', 
-        right: 'addEventButton'
-      },
+//
+//      header: {
+//  left: 'title', 
+//        right: 'addEventButton'
+//      },
       
       customButtons: {
         addEventButton: {
           text: 'add event...',
 
           click: function() {
-
+            /*
             var titl = prompt('Enter the title');
             var dateStr = prompt('Enter a date in YYYY-MM-DD format');
             var date = moment(dateStr);
@@ -31,7 +31,7 @@ $(function() {
               alert('Great. Now, update your database...');
             } else {
               alert('Invalid date.');
-            }
+            }*/
           }
         }
       }
@@ -48,6 +48,7 @@ $(document).ready(function() {
     var dateDone = $('#dateDone').val();
     var event = {title: eventName, start: duration, allDay: dateDone};
     events.push(event);
+     $('#eventName') = ""
     alert(eventName);
   });
 });
