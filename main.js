@@ -1,5 +1,5 @@
+var events = [];
 $(function() {
-        var events = []
 
     $('#calendar').fullCalendar({
       
@@ -7,7 +7,7 @@ $(function() {
       defaultView: 'month',
 
       header: {
-	left: 'title', 
+  left: 'title', 
         right: 'addEventButton'
       },
       
@@ -39,3 +39,15 @@ $(function() {
     });
 
   });
+
+$(document).ready(function() {
+  $('#myForm').submit(function(event) {
+    event.preventDefault();
+    var eventName = $('#eventName').val();
+    var duration = $('#duration').val();
+    var dateDone = $('#dateDone').val();
+    var event = {title: eventName, start: duration, allDay: dateDone};
+    events.push(event);
+    alert(eventName);
+  });
+});
